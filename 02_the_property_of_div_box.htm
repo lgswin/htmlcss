@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- META -->
+        <meta charset="utf-8">
+
+        <!-- Title -->
+        <title>Modern Website & Layout Design</title>
+
+        <!-- CSS -->
+        <style>
+            * { margin: 0; padding: 0;}
+        </style>
+
+        <!-- JS -->
+        <script></script>
+    </head>
+    <body>
+        <!-- Div 박스 성질 1 : 크기나 내용이 없으면 안나타남 -->
+        <div style="background-color: black; width: 200px; height: 200px"></div>
+        <br>
+
+        <!-- Div 박스 성질 2 -->
+        <div  style="background-color: red; width: 100%; height: 200px"></div>
+        <br>
+
+        <!-- Div 박스 성질 3 : div박스는 여백을 다른 div박스에게 허용하지 않는다. -->
+        <div  style="background-color: green; width: 50%; height: 200px"></div>
+        <div  style="background-color: black; width: 50%; height: 200px"></div>
+        <br>
+
+        <!-- Div 박스 성질 4 : 나란히 가로로 정렬하기 -->
+        <!-- displya:inline은 나머지 속성을 무력화시킴, div box내의 내용에 맞게 맞춤 -->
+        <!-- display:block은 가로 전체영역을 차지함, display:inline-block 지정한 크기만큼만 영역을 차지함-->
+        <!-- 즉 display:inline-block을 각각 지정해주면 지정한 크기외 여백에 이어 붙일수 있음. -->
+        <div  style="display:inline-block; background-color: pink; width: 40%; height: 200px"></div>
+        <div  style="display:inline-block; background-color: black; width: 40%; height: 200px"></div>
+        <div  style="display:inline-block; background-color: yellow; width: 10%; height: 200px"></div>
+        <br>
+
+        <!-- Div 박스 성질 5 : 50% 너비로(가로크기) 나란히 가로로 정렬하기 1-->
+        <div style="font-size: 0;">
+            <div  style="display:inline-block; background-color: skyblue; width: 50%; height: 200px;"></div>
+            <div  style="display:inline-block; background-color: red; width: 50%; height: 200px";></div>
+        </div>
+        <br>
+
+        <!-- Div 박스 성질 6 : 50% 너비로(가로크기) 나란히 가로로 정렬하기 2-->
+        <div  style="display:inline-block; background-color: green; width: 50%; height: 200px;"></div><div  style="display:inline-block; background-color: brown; width: 50%; height: 200px";></div>
+        <br>
+
+        <!-- Div 박스 성질 7 : 50% 너비로(가로크기) 나란히 가로로 정렬하기 3-->
+        <!-- - margin으로 지정할수 있음 margin: 1 2 3 4 ; 4 방향에 대한 각각의 마진값 -->
+        <!-- 그런데 display:inline-block 속성만 있으면 margin 0으로도 여백이 없어져서 그냥 붙여서 표현할수 있음-->
+        <div style="font-size: 0;">
+            <div  style="display:inline-block; background-color: red; width: 50%; height: 200px; margin:0 -10px 0 0"></div>
+            <div  style="display:inline-block; background-color: blue; width: 50%; height: 200px"></div>
+        </div>
+        <br>
+
+    </body> 
+</html>
