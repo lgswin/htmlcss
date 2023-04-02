@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Mordern website & Layout design</title>
+        <style>
+            html, body {height: 100%; background: #220022; color: #c0c0c0;}
+            * {margin: 0; padding: 0}
+
+            .box1 {
+                background-color: white; width: 50%; height: 500px;
+                float:left;
+            }
+            .box2 {
+                background-color: yellow; width: 50%; height: 500px;
+                float:left;
+            }
+            .box3 {
+                background-color: skyblue; width: 100%; height: 150px;
+            }
+            /* 차단막이 될 class */
+            .clearfix::after{
+                content: ""; display: block; clear: both;
+            }
+        </style>
+
+        <script>
+
+        </script>
+    </head>
+    <body>
+        /* box1 , box2를 clearfix로 차단막을 만들어줘서 box3가 침범하지 못하도록 함 */ 
+        <div class="clearfix">
+            <div class="box1">Box 1</div>
+            <div class="box2">Box 2</div>
+        </div>
+        <div class="box3">Box 3</div>
+    </body>
+
+</html>
+
+<!--
+    1) 1번 예제의 문제점은 새로 만든 하단의 박스가 위 박스 밑으로 들어간다는 점.
+        - 이것을 막기 위해서는 "클리어픽스" 기술을 사용.
+        - float 해제
+-->
