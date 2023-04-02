@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>test</title>
+        <style>
+            html, body {height:100%; background: #000011;}
+            * {margin:0; padding:0}
+
+            /* vertical-align: middle 이 동작안함 ㅡㅡ; */
+            /* line-height: 170px 이렇게 하드코딩하기도 하지만 가변적이지 않음. */
+            /* div box의 성질을 table로 바꾸면 vertical-align이 먹음 */
+            .box1{
+                background-color: #80ffff; height: 25%;
+                border: 10px solid; box-sizing: border-box;
+                display: table-cell; text-align: center; vertical-align: middle;
+            }
+            
+            /* div 를 아래와같이 table 속성을 부여하고 child div에 vertical-align을 주면 먹음. */
+            .box1-wrap {
+                display: table; width: 100%; height: 25%;
+            }
+
+            .box2{
+                background-color: white; height: 25%;
+                border: 10px solid; box-sizing: border-box;
+            }
+            .box3{
+                background-color: #80ffff; height: 25%;
+                border: 10px solid; box-sizing: border-box;
+            }
+            .box4{
+                background-color: white; height: 25%;
+                border: 10px solid; box-sizing: border-box;
+            }
+
+            
+            .border-bottom {
+                border-bottom: 0px solid;
+            }
+
+        </style>
+        <script>
+
+        </script>
+    </head>
+    <body>
+        <!-- div 태그의 구조를 아래 table과 같이 매칭시켜서 이해하면 됨
+        <table>
+            <tr>
+                <td> cell </td>
+            </tr>
+        </table>
+        -->
+
+        <div class="box1-wrap"> <!-- table 속성 지정 -->
+            <div class="box1 border-bottom">box 1</div> <!-- vertical-align 적용 -->
+        </div>
+        <div class="box2 border-bottom">box 2</div>
+        <div class="box3">box 3</div>
+        <div class="box4">box 4</div>
+    </body>
+</html>
