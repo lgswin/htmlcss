@@ -5,17 +5,22 @@
         <title>
             Mordern website layout & design
         </title>
+        <!-- "div Tag 보다 상위 태그 body, html에서도 height 100% 를 지원하도록 선언해줘야 적용됨" -->
         <style>
+            html, body {height:100%;}
             * {margin : 0; padding : 0}
-            .box1 {background-color: red; width:40%; height:100px; float: left}
-            .box2 {background-color: green; width:30%; height:100px; float: left}
-            .box3 {background-color: pink; width: 20%; height: 100px; solid;}
+            .box1 {background-color: red; width:30%; height:100px; float: right}
+            .box2 {background-color: green; width:30%; height:100px; float: right}
+            .box3 {display:inline-block; background-color: rgb(183, 182, 237); width: 40%; height:50%; border: 0px solid; float: left;}
+            .height100 {height: 100%;}
+            .height70 {height: 70%;}
+            .height30 {height: 30%;}
         </style>
         <script></script>
     </head>
     <body>
         <div class="box1">Box 1</div>
         <div class="box2">Box 2</div>
-        <div class="box3">Box 3</div>
+        <div class="box3 height">Box 3</div>
     </body>
 </html>
