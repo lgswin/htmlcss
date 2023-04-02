@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Mordern website layout & design
+        </title>
+        <!-- "div Tag 보다 상위 태그 body, html에서도 height 100% 를 지원하도록 선언해줘야 적용됨" -->
+        <style>
+            html, body {height:100%;}
+            * {margin : 0; padding : 0}
+            .box1 {background-color: red; width:30%; height:100px; float: right}
+            .box2 {background-color: green; width:30%; height:100px; float: right}
+            /*
+            box-sizing: border-box; 내용물보다 박스크기가 더 중요, border size를 늘려도 content를 줄여서 위치를 맞춰줌
+            box-sizing: content-box; 내용물이 더 중요함
+            */
+            .box3 {display:inline-block; background-color: rgb(183, 182, 237); width: 40%; height:50%; border: 10px solid; box-sizing: content-box}
+
+            /*
+            .height100 {height: 100%;}
+            .height70 {height: 70%;}
+            .height30 {height: 30%;}
+            */
+        </style>
+        <script></script>
+    </head>
+    <body>
+        <div class="box1">Box 1</div>
+        <div class="box2">Box 2</div>
+        <div class="box3 height">Box 3</div>
+    </body>
+</html>
