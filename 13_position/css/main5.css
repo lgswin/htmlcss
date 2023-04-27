@@ -1,0 +1,7 @@
+span {
+    width: 100px;
+    height: 100px;
+    background: orange;
+    font-size: 40px;
+    position: absolute;
+}
